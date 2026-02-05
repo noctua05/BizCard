@@ -27,8 +27,12 @@ public class Company {
 
     private String website;
 
+    @Lob
+    @Column(name = "logo_url")
     private String logoUrl;
 
+    @Lob
+    @Column(name = "qr_code")
     private String qrCode;
 
     public void setId(String id) {

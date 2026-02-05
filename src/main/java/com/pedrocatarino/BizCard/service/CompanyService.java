@@ -33,6 +33,15 @@ public class CompanyService {
 
         company.setId(generateId());
 
+        String companyUrl = "https://bizcard.com/companies/" + company.getId();
+
+        try {
+            String qrCodeBase64 = QrCodeService.generateQRCodeBase64(companyUrl, 250, 250);
+            company.setQrCode(qrCodeBase64);
+        } catch (Exception e) {
+            e.printStackTrace(); // ou logue apropriadamente
+        }
+
         return companyRepository.save(company);
     }
 
