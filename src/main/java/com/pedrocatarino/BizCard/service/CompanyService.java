@@ -45,5 +45,12 @@ public class CompanyService {
                 .orElseThrow(() -> new RuntimeException("Company not found"));
     }
 
+    public boolean deleteCompany(String id) {
+        if (companyRepository.existsById(id)) {
+            companyRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 
 }
