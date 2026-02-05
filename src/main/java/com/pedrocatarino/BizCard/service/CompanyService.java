@@ -5,6 +5,8 @@ import com.pedrocatarino.BizCard.controller.request.CompanyRequest;
 import com.pedrocatarino.BizCard.entity.Company;
 import com.pedrocatarino.BizCard.repository.CompanyRepository;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -45,8 +47,8 @@ public class CompanyService {
         return companyRepository.save(company);
     }
 
-    public List<Company> getAll() {
-        return companyRepository.findAll();
+    public Page<Company> getAll(Pageable pageable) {
+        return companyRepository.findAll(pageable);
     }
 
     public Company getById(String id) {
