@@ -17,8 +17,11 @@ public final class CompanyMapper {
                 company.getPhone(),
                 company.getWhatsapp(),
                 company.getWebsite(),
-                company.getLogoUrl(),
-                company.getQrCode()
+                company.getLogo(),
+                company.getQrCode(),
+                company.getCover(),
+                company.getLocation(),
+                company.getTheme()
         );
     }
 

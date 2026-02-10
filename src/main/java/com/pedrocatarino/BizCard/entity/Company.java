@@ -27,49 +27,21 @@ public class Company {
 
     private String website;
 
+    private String location;
+
+    private Integer theme;
+
     @Lob
     @Column(name = "logo_url")
-    private String logoUrl;
+    private String logo;
+
+    @Lob
+    @Column(name = "cover")
+    private String cover;
 
     @Lob
     @Column(name = "qr_code")
     private String qrCode;
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setInstagram(String instagram) {
-        this.instagram = instagram;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public void setWhatsapp(String whatsapp) {
-        this.whatsapp = whatsapp;
-    }
-
-    public void setWebsite(String website) {
-        this.website = website;
-    }
-
-    public void setLogoUrl(String logoUrl) {
-        this.logoUrl = logoUrl;
-    }
-
-    public void setQrCode(String qrCode) {
-        this.qrCode = qrCode;
-    }
 
     public String getId() {
         return id;
@@ -99,11 +71,71 @@ public class Company {
         return website;
     }
 
-    public String getLogoUrl() {
-        return logoUrl;
+    public String getLocation() {
+        return location;
+    }
+
+    public Integer getTheme() {
+        return theme;
+    }
+
+    public String getLogo() {
+        return logo;
+    }
+
+    public String getCover() {
+        return cover;
     }
 
     public String getQrCode() {
         return qrCode;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setInstagram(String instagram) {
+        this.instagram = instagram;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setWhatsapp(String whatsapp) {
+        this.whatsapp = whatsapp;
+    }
+
+    public void setWebsite(String website) {
+        this.website = website;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
+    public void setTheme(Integer theme) {
+        this.theme = theme;
+    }
+
+    public void setLogo(String logo) {
+        this.logo = logo;
+    }
+
+    public void setCover(String cover) {
+        this.cover = cover;
+    }
+
+    public void setQrCode(String qrCode) {
+        this.qrCode = qrCode;
     }
 }

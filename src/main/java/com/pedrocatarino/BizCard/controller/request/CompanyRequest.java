@@ -7,6 +7,9 @@ public record CompanyRequest(
         String phone,
         String whatsapp,
         String website,
-        String logoUrl
+        String logo,
+        String cover,
+        String location,
+        Integer theme
 ) {
 }

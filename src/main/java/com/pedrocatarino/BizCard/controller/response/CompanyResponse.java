@@ -8,8 +8,11 @@ public record CompanyResponse(
         String phone,
         String whatsapp,
         String website,
-        String logoUrl,
-        String qrCode
+        String logo,
+        String qrCode,
+        String cover,
+        String location,
+        Integer theme
 ) {
 }
 
