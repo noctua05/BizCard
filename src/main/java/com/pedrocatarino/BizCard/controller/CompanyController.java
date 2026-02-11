@@ -59,6 +59,16 @@ public class CompanyController {
             return ResponseEntity.notFound().build(); // 404
         }
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<CompanyResponse> updateCompany(
+            @PathVariable String id,
+            @RequestBody CompanyRequest request) {
+
+        Company updatedCompany = companyService.updateCompany(id, request);
+        return ResponseEntity.ok(CompanyMapper.toResponse(updatedCompany));
+    }
+
 }
 
 

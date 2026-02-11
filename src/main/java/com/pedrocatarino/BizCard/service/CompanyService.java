@@ -64,4 +64,21 @@ public class CompanyService {
         return false;
     }
 
+    public Company updateCompany(String id, CompanyRequest request) {
+        Company company = companyRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Company not found"));
+
+        // Atualiza apenas os campos permitidos
+        company.setName(request.name());
+        company.setEmail(request.email());
+        company.setInstagram(request.instagram());
+        company.setPhone(request.phone());
+        company.setWhatsapp(request.whatsapp());
+        company.setWebsite(request.website());
+        company.setLogo(request.logo());
+
+        return companyRepository.save(company);
+    }
+
+
 }
