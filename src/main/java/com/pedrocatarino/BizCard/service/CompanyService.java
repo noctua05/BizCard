@@ -35,7 +35,7 @@ public class CompanyService {
 
         company.setId(generateId());
 
-        String companyUrl = "https://bizcard.com/companies/" + company.getId();
+        String companyUrl = "https://bizcard.com.br/companies/" + company.getId();
 
         try {
             String qrCodeBase64 = QrCodeService.generateQRCodeBase64(companyUrl, 250, 250);
